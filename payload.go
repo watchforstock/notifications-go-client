@@ -4,10 +4,10 @@ import "net/url"
 
 // Payload that will be send with different set of requests by the client.
 type Payload struct {
-	EmailAddress    string            `json:"email_address"`
-	Letter          string            `json:"letter"` // TODO Establish what this actually is and prepare for usage.
+	EmailAddress    string            `json:"email_address,omitempty"`
+	Letter          string            `json:"letter,omitempty"` // TODO Establish what this actually is and prepare for usage.
 	Personalisation map[string]string `json:"personalisation"`
-	PhoneNumber     string            `json:"phone_number"`
+	PhoneNumber     string            `json:"phone_number,omitempty"`
 	Reference       string            `json:"reference"`
 	TemplateID      string            `json:"template_id"`
 }

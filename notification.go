@@ -7,7 +7,7 @@ import (
 
 // Template may be returned as part of Notification response.
 type Template struct {
-	ID      int64  `json:"id"`
+	ID      string `json:"id"`
 	URI     string `json:"uri"`
 	Version int64  `json:"version"`
 }
